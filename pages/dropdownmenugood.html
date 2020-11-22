@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropDown</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .header{
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            background-color: royalblue;
+            display: flex;
+            justify-content:space-evenly;
+            align-content: center;
+        }
+        .menu{
+            list-style: none;
+            text-align: center;
+        }
+        .menu li{
+            display: inline-block;
+            line-height: 80px;
+            position: relative;
+        }
+        .menu li a{
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            /* padding: 0px 40px; */
+            width: 200px;
+            font-size: 25px;
+            transition: 1s;
+        }
+        .menu li a:hover{
+            background-color: white;
+            color: black;
+        }
+        .submenu1{
+            position: absolute;
+            width: 200px;
+            background-color: royalblue;
+            left:0;
+            display: none;
+            transition: 1s;
+        }
+        .submenu2{
+            position: absolute;
+            left: 100%;
+            width: 200px;
+            background-color: royalblue;
+            top: 0;
+            display: none;
+        }
+        .menu li:hover .submenu1{
+            display: block;
+        }
+        .submenu1 li:hover .submenu2 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Team</a>
+                        <ul class="submenu1">
+                            <li><a href="#">Front-End</a>
+                                <ul class="submenu2">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">Javascript</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Back-End</a>
+                                <ul class="submenu2">
+                                    <li><a href="#">php</a></li>
+                                    <li><a href="#">Node</a></li>
+                                    <li><a href="#">Python</a></li>
+                                    <li><a href="#">Java</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

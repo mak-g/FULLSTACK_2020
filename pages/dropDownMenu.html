@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            background-color: darkslateblue;
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .header h2{
+            /* float: left; */
+            line-height: 80px;
+            color: ghostwhite;
+            font-size: 40px;
+            text-transform: uppercase;
+            padding: 0px 20px;
+        }
+        .menu{
+            list-style: none;
+            position:relative;
+        }
+        .menu li{
+            display: inline-block;
+            line-height: 80px;
+            position: relative;
+            
+        }
+        .menu li a{
+            display: block;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: ghostwhite;
+            font-size: 20px;
+            width: 150px;
+            transition: 1s;
+            text-align: center;
+            
+        }
+        .menu li a:hover{
+            background-color: indianred;
+            color: black;
+        }
+        .submenu1{
+            position: absolute;
+            left:0px;
+            width: 150px;
+            background-color: darkslateblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Cricket</h2>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a>
+            <ul class="submenu1">
+                <li><a href="">Front-End</a></li>
+                <!-- <ul class="submenu2">
+                <li><a href="">HTML</a></li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">Javascript</a></li>
+                </ul> -->
+                <li><a href="">Back-End</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

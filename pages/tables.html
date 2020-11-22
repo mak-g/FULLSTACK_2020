@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+  </head>
+  <style>
+    table,
+    th,
+    tr,
+    td {
+      border: 3px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      /* width: 800px; */
+    }
+    caption {
+      caption-side: bottom;
+      color: chartreuse;
+    }
+  </style>
+  <body>
+    <table align="center">
+      <caption>
+        List of Courses
+      </caption>
+      <tr>
+        <th>S No.</th>
+        <th>Topic</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td width="37px">1</td>
+        <td>Introduction to Tables</td>
+        <td>Delivered</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Introduction to Tables</td>
+        <td>Delivered</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td rowspan="2">
+          Introduction to Tables
+          <table>
+            <tr>
+              <td>ABCD</td>
+              <td>abcd</td>
+            </tr>
+          </table>
+        </td>
+        <td>Delivered</td>
+      </tr>
+      <tr>
+        <td>1</td>
+
+        <td>Delivered</td>
+      </tr>
+      <tr>
+        <td colspan="2">Total</td>
+        <td>20000</td>
+      </tr>
+    </table>
+  </body>
+</html>

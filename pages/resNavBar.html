@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resNavBar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box; /*it removes the margin padding for box  */
+        }
+        #header{
+            width: 100%;
+            height:80px;
+            background-color: chocolate;
+            padding: 0px 20px;
+        }
+        #header h2{
+            float: left;
+            color: white;
+            line-height: 80px; /*this makes the content in center of the box yahan header hai*/
+            text-transform: uppercase;
+            font-size: 40px;
+        }
+        #header .menu{
+            list-style: none;
+            float: right;
+        }
+        #header .menu li{
+            display: inline-block;
+            line-height: 80px;
+            
+        }
+        #header .menu li a{
+            color:white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 20px;
+            padding:0px 20px;
+        }
+        #header .menu li a:hover,.show-btn:hover , .hide-btn:hover{
+            color: black;
+            transition: 2s;
+        }
+        .show-btn , .hide-btn{
+            font-size: 30px;
+            color: white;
+            line-height: 80px;
+            display: none;
+        }
+        .show-btn{
+            float: right;
+        }
+        
+        #chk {
+            position:absolute ;
+            visibility: hidden;
+            z-index: -10;
+        }
+        @media(max-width: 840px){
+            .show-btn , .hide-btn{
+                display: block;
+            }
+            .menu{
+                position: fixed;
+                top: 0;
+                /* slider effect creation */
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: chocolate;
+                text-align: center;
+                padding:100px 0px;
+                /* line-height: normal; */
+                transition: 1s;
+            }
+            #chk:checked ~ .menu{
+                right: 0;  
+            }
+            #header .menu li{
+                display: block;
+            }
+            #header .menu li a{ 
+                display: block;
+            }
+            .hide-btn{
+                position: absolute;
+                right:20px;
+                top :10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h2>Pokemon</h2>
+        <input type="checkbox"  id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars" ></i>
+        </label>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <label for="chk" class="hide-btn">
+                <i class="fa fa-times" ></i>
+            </label>
+        </ul>
+    </div>
+</body>
+</html>

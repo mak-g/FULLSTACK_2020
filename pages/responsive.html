@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            border: solid black;
+            width: 1200px;
+            margin: 0px auto;
+            padding:15px;
+            
+        }
+        
+        /* 1201 or more ----> Extra large screen
+        1025 to 1200    ----> Large Screen
+        789 to 1024     ----> Medium large display
+        481 to 768      ----> Medium devices
+        upto480         ----> Mobile Screen     */
+        @media(min-width: 1201px){
+           
+        #header{
+            background-color: lightgrey;
+            height: 70px;
+            /* width: 100%; */
+            border-radius: 15px;
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;    
+        }
+        #content{
+            /* border: solid red; */
+        }
+        #content::after {
+        content: '';
+        display: block;
+        clear: both;
+        }
+        #leftSideBar{
+            width: 20%;
+            /* border:solid blue; */
+            /* height: 515px; */
+            float:left;
+        }
+        #navigation{
+            width: 100%;
+            height: 300px;
+            background-color:orangered;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #news{
+            width: 100%;
+            height: 200px;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #rightSideBar{
+            width:78%;
+            height: 515px;
+            /* border: solid green; */
+            float: right;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #footer{
+            background-color:mediumaquamarine;
+            height: 70px;
+            width: 100%;
+            border-radius: 15px;
+           
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-top: 15px;   
+
+        }
+
+        }
+        /* Breakpoint-2 */
+        @media(min-width: 1025px) and (max-width:1200px){
+            
+        #header{
+            background-color: lightgrey;
+            height: 70px;
+            width: 100%;
+            border-radius: 15px;
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;    
+        }
+        #content{
+            /* border: solid red; */
+        }
+        #content::after {
+        content: '';
+        display: block;
+        clear: both;
+        }
+        #leftSideBar{
+            width: 20%;
+            /* border:solid blue; */
+            /* height: 515px; */
+            float:left;
+
+            display: flex;
+            flex-direction:column;
+        }
+        #navigation{
+            order: 2;
+            width: 100%;
+            height: 300px;
+            background-color:orangered;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #news{
+            order: 1;
+            width: 100%;
+            height: 200px;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        #rightSideBar{
+            width:78%;
+            height: 515px;
+            /* border: solid green; */
+            float: right;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #footer{
+            background-color:mediumaquamarine;
+            height: 70px;
+            width: 100%;
+            border-radius: 15px;
+           
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-top: 15px;   
+
+        }
+        }
+        /* Breakpoint - 3 */
+        @media (min-width: 769px) and (max-width:1024px){
+            
+        #header{
+            background-color: lightgrey;
+            height: 70px;
+            /* width: 100%; */
+            border-radius: 15px;
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;    
+        }
+        #content{
+            /* border: solid red; */
+        }
+        #content::after {
+        content: '';
+        display: block;
+        clear: both;
+        }
+        #leftSideBar{
+            width: 20%;
+            /* border:solid blue; */
+            /* height: 515px; */
+            float:left;
+            display: flex;
+            flex-direction: column;
+        }
+        #navigation{
+            width: 100%;
+            height: 515px;
+            background-color:orangered;
+            /* margin-bottom: 15px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #news{
+            display: none;
+        }
+        #rightSideBar{
+            width:78%;
+            height: 515px;
+            /* border: solid green; */
+            float: right;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #footer{
+            background-color:mediumaquamarine;
+            height: 70px;
+            width: 100%;
+            border-radius: 15px;
+           
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-top: 15px;   
+
+        }
+        } 
+        /* Breakpoint - 4 */
+        @media (min-width: 481px) and (max-width:768px){
+            
+        #header{
+            background-color: lightgrey;
+            height: 70px;
+            /* width: 100%; */
+            border-radius: 15px;
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;    
+        }
+        #content{
+            /* border: solid red; */
+            display: flex;
+            flex-direction: column;
+        }
+        #content::after {
+        content: '';
+        display: block;
+        clear: both;
+        }
+        #leftSideBar{
+            order: 2;
+            width: 100%;
+            /* border:solid blue; */
+            /* height: 515px; */
+            /* float:left; */
+            display: flex;
+            flex-direction: row;
+        }
+        #navigation{
+            margin-right: 1%;
+            width: 70%;
+            height: 100px;
+            background-color:orangered;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #news{
+            
+            width: 29%;
+            height: 100px;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+        #rightSideBar{
+            order: 1;
+            width:100%;
+            height: 515px;
+            /* border: solid green; */
+            /* float: right; */
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 30px;
+            
+        }
+        #footer{
+            background-color:mediumaquamarine;
+            height: 70px;
+            width: 100%;
+            border-radius: 15px;
+           
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-top: 15px;   
+
+        }
+        } 
+        /* Breakpoint -5 */
+        @media (max-width: 480px){
+            #header{
+            background-color: lightgrey;
+            height: 70px;
+            /* width: 100%; */
+            border-radius: 15px;
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;    
+        }
+        #content{
+            /* border: solid red; */
+            display: flex;
+            flex-direction: column;
+        }
+        #content::after {
+        content: '';
+        display: block;
+        clear: both;
+        }
+        #leftSideBar{
+            order:2;
+            width: 100%;
+            /* border:solid blue; */
+            /* height: 515px; */
+            float:left;
+            display: flex;
+            flex-direction: column;
+        }
+        #navigation{
+            order: 2;
+            width: 100%;
+            height: 100px;
+            background-color:orangered;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        #news{
+            order: 1;
+            width: 100%;
+            height: 100px;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        #rightSideBar{
+            order:1;
+            width:100%;
+            height: 515px;
+            /* border: solid green; */
+            float: right;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        #footer{
+            background-color:mediumaquamarine;
+            height: 70px;
+            width: 100%;
+            border-radius: 15px;
+           
+            /* Content centre in grey color header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            color: white;
+            font-size: 40px;
+            margin-top: 10px;   
+
+        }
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="header">Header</div>
+        <div id="content"> 
+            <div id="leftSideBar">
+                <div id="navigation">Navigation</div>
+                <div id="news">News</div>
+            </div>
+            <div id="rightSideBar">Main Content</div>
+        </div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>
